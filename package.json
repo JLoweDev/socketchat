@@ -1,0 +1,19 @@
+{
+  "name": "socketchat",
+  "version": "1.0.0",
+  "description": "Realtime chat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JLoweDev/socketchat.git"
+  },
+  "author": "JLoweDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JLoweDev/socketchat/issues"
+  },
+  "homepage": "https://github.com/JLoweDev/socketchat#readme"
+}
