@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/JLoweDev/socketchat/issues"
   },
-  "homepage": "https://github.com/JLoweDev/socketchat#readme"
+  "homepage": "https://github.com/JLoweDev/socketchat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "socket.io": "^3.1.2"
+  }
 }
