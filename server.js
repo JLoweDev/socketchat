@@ -15,6 +15,9 @@ io.on('connection', socket => {
     console.log('New WS Connection...')
 
     socket.emit('message', 'Welcome to SocketChat!')
+
+    // Broadcast when a user connects
+    socket.broadcast.emit();
 })
 
 const PORT = process.env.PORT || 3000; 
