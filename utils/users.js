@@ -19,7 +19,7 @@ function userLeave(id) {
     const index = users.findIndex(user => user.id === id)
 
     if(index !== -1) {
-        return user.splice(index, 1);
+        return user.splice(index, 1)[0];
     }
 }
 
