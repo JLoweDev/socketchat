@@ -3,6 +3,7 @@ const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
+const { userJoin, getCurrentUser } = require('./utils/users');
 
 const app = express();
 const server = http.createServer(app);
@@ -16,7 +17,7 @@ const botName = 'SocketChat Bot';
 // Run when client connects
 io.on('connection', socket => {
     socket.on('joinRoom', ({ username, room }) => {
-        
+
 
         // Emits to user connecting, welcoming them
         socket.emit('message', formatMessage(botName, 'Welcome to SocketChat!'))
