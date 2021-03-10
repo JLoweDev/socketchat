@@ -16,21 +16,23 @@ const botName = 'SocketChat Bot';
 // Run when client connects
 io.on('connection', socket => {
     socket.on('joinRoom', ({ username, room }) => {
+        
+
         // Emits to user connecting, welcoming them
         socket.emit('message', formatMessage(botName, 'Welcome to SocketChat!'))
 
         // Broadcast when a user connects to users other than user
         socket.broadcast.emit('message', formatMessage(botName, 'A user has joined the chat'));
     });
-
-    // Runs when client disconnects
-    socket.on('disconnect', () => {
-        io.emit('message', formatMessage(botName, 'A user has left the chat'));
-    })
     
     // Listen for chatMessage
     socket.on('chatMessage', (msg) => {
         io.emit('message', formatMessage('USER', msg));
+    })
+
+    // Runs when client disconnects
+    socket.on('disconnect', () => {
+        io.emit('message', formatMessage(botName, 'A user has left the chat'));
     })
 })
 
